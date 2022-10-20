@@ -1,30 +1,62 @@
-.storybook-button {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  border: 0;
-  border-radius: 3em;
+.nexi-button {
+  font-family: 'Karbon-semibold', sans-serif;
+  border-radius: 4px;
+  min-width: 180px;
   cursor: pointer;
-  display: inline-block;
-  line-height: 1;
-}
-.storybook-button--primary {
-  color: white;
-  background-color: #1ea7fd;
-}
-.storybook-button--secondary {
-  color: #333;
-  background-color: transparent;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-}
-.storybook-button--small {
-  font-size: 12px;
-  padding: 10px 16px;
-}
-.storybook-button--medium {
-  font-size: 14px;
-  padding: 11px 20px;
-}
-.storybook-button--large {
+  height: 40px;
+  text-transform: uppercase;
+  border: 0;
+  margin: 0;
+  padding: 12px 20px;
+  letter-spacing: 2px;
   font-size: 16px;
-  padding: 12px 24px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* PRIMARY BUTTON */
+
+.nexi-button--primary {
+  background-color: #2d32aa;
+  color: #ffffff;
+}
+.nexi-button--primary:hover {
+  background-color: #00b8de;
+  color: #ffffff;
+}
+.nexi-button--primary:active {
+  background-color: #00a5c8;
+  color: #ffffff;
+}
+.nexi-button--primary:disabled {
+  background-color: #2d32aa;
+  color: #ffffff;
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+/* SECONDARY BUTTON */
+
+.nexi-button--secondary {
+  background-color: #ffffff;
+  color: #2d32aa;
+  border: 1px solid #2d32aa;
+}
+.nexi-button--secondary:hover {
+  border: 1px solid #00b8de;
+  color: #00b8de;
+  background-color: #ffffff;
+}
+.nexi-button--secondary:active {
+  border: 1px solid #00a5c8;
+  color: #00a5c8;
+  background-color: #ffffff;
+}
+.nexi-button--secondary:disabled {
+  background-color: #ffffff;
+  color: #2d32aa;
+  border: 1px solid #2d32aa;
+  opacity: 0.2;
 }

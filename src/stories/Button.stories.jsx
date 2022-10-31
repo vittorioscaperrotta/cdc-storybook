@@ -6,10 +6,6 @@ import { Button } from './Button';
 export default {
   title: 'Example/Button',
   component: Button,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
 };
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
@@ -20,10 +16,28 @@ export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
   label: 'Button',
+  disabled: false,
+};
+
+export const PrimaryDisabled = Template.bind({});
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
+Primary.args = {
+  primary: true,
+  label: 'Button',
+  disabled: true
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
+  primary: false,
   label: 'Button',
+  disabled: false
+};
+
+export const SecondaryDisabled = Template.bind({});
+Secondary.args = {
+  primary: false,
+  label: 'Button',
+  disabled: true
 };
 

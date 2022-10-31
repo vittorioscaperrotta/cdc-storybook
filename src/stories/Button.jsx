@@ -5,13 +5,13 @@ import './button.css';
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
+export const Button = ({ primary, backgroundColor, size, label, disabled, ...props }) => {
   const mode = primary ? 'nexi-button--primary' : 'nexi-button--secondary';
+  const status = disabled ? 'disabled' : '';
   return (
     <button
       type="button"
-      className={['nexi-button', mode].join(' ')}
-      style={backgroundColor && { backgroundColor }}
+      className={['nexi-button', mode, status].join(' ') }
       {...props}
     >
       {label}
@@ -25,21 +25,22 @@ Button.propTypes = {
    */
   primary: PropTypes.bool,
   /**
-   * What background color to use
-   */
-  backgroundColor: PropTypes.string,
-  /**
-   * Button contents
+   * Button laberl
    */
   label: PropTypes.string.isRequired,
   /**
    * Optional click handler
    */
   onClick: PropTypes.func,
+  /**
+   * Disabled
+   */
+  disabled: PropTypes.bool,
 };
 
 Button.defaultProps = {
   backgroundColor: null,
   primary: false,
+  disabled: false,
   onClick: undefined,
 };

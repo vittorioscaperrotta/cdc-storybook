@@ -30,7 +30,7 @@
   background-color: #00a5c8;
   color: #ffffff;
 }
-.nexi-button--primary:disabled {
+.nexi-button--primary.disabled {
   background-color: #2d32aa;
   color: #ffffff;
   pointer-events: none;
@@ -54,7 +54,7 @@
   color: #00a5c8;
   background-color: #ffffff;
 }
-.nexi-button--secondary:disabled {
+.nexi-button--secondary.disabled {
   background-color: #ffffff;
   color: #2d32aa;
   border: 1px solid #2d32aa;

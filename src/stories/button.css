@@ -36,6 +36,18 @@
   pointer-events: none;
   opacity: 0.2;
 }
+.nexi-button--primary.dark-theme {
+  background-color: #ffffff;
+  color: #2d32aa;
+}
+.nexi-button--primary.dark-theme:hover {
+  background-color: #00b8de;
+  color: #ffffff;
+}
+.nexi-button--primary.dark-theme:active {
+  background-color: #00a5c8;
+  color: #ffffff;
+}
 
 /* SECONDARY BUTTON */
 
@@ -59,4 +71,19 @@
   color: #2d32aa;
   border: 1px solid #2d32aa;
   opacity: 0.2;
+}
+.nexi-button--secondary.dark-theme {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+.nexi-button--secondary.dark-theme:hover {
+  background-color: transparent;
+  color: #00b8de;
+  border: 1px solid #00b8de;
+}
+.nexi-button--secondary.dark-theme:active {
+  background-color: transparent;
+  color: #00a5c8;
+  border: 1px solid #00a5c8;
 }

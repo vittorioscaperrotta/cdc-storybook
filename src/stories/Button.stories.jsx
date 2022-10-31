@@ -24,6 +24,17 @@ PrimaryDisabled.args = {
   disabled: true
 };
 
+export const PrimaryDark = Template.bind({});
+PrimaryDark.args = {
+  primary: true,
+  label: 'Button',
+  disabled: false,
+};
+
+PrimaryDark.parameters = {
+  backgrounds: { default: 'dark' },
+};
+
 export const Secondary = Template.bind({});
 Secondary.args = {
   primary: false,
@@ -36,5 +47,16 @@ SecondaryDisabled.args = {
   primary: false,
   label: 'Button',
   disabled: true
+};
+
+export const SecondaryDark = Template.bind({});
+SecondaryDark.args = {
+  primary: true,
+  label: 'Button',
+  disabled: false,
+};
+
+SecondaryDark.parameters = {
+  backgrounds: { default: 'dark' },
 };
 

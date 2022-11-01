@@ -8,6 +8,6 @@ export default create({
   brandTarget: '_self',
 
   // Typography
-  fontBase: '"Karbon-semibold", sans-serif',
+  fontBase: '"Karbon-regular", sans-serif',
   fontCode: 'monospace'
 });

@@ -4,7 +4,7 @@ import { Button } from './Button';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Example/Button',
+  title: 'Component/Button',
   component: Button,
 };
 
@@ -15,13 +15,15 @@ Primary.args = {
   primary: true,
   label: 'Button',
   disabled: false,
+  dark: false,
 };
 
 export const PrimaryDisabled = Template.bind({});
 PrimaryDisabled.args = {
   primary: true,
   label: 'Button',
-  disabled: true
+  disabled: true,
+  dark: false,
 };
 
 export const PrimaryDark = Template.bind({});
@@ -29,6 +31,7 @@ PrimaryDark.args = {
   primary: true,
   label: 'Button',
   disabled: false,
+  dark: true,
 };
 
 PrimaryDark.parameters = {
@@ -39,14 +42,16 @@ export const Secondary = Template.bind({});
 Secondary.args = {
   primary: false,
   label: 'Button',
-  disabled: false
+  disabled: false,
+  dark: false,
 };
 
 export const SecondaryDisabled = Template.bind({});
 SecondaryDisabled.args = {
   primary: false,
   label: 'Button',
-  disabled: true
+  disabled: true,
+  dark: false,
 };
 
 export const SecondaryDark = Template.bind({});
@@ -54,6 +59,7 @@ SecondaryDark.args = {
   primary: true,
   label: 'Button',
   disabled: false,
+  dark: true,
 };
 
 SecondaryDark.parameters = {

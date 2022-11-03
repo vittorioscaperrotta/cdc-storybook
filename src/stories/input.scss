@@ -23,8 +23,8 @@
   border: 0;
   padding: 15px;
   font-family: 'Karbon-Regular', sans-serif;
-  caret-color: #00a5c8;
-  color: #000000;
+  caret-color: $brand-blue-active;
+  color: $brand-black;
   letter-spacing: 0;
   font-size: 18px;
   line-height: 19px;
@@ -69,7 +69,7 @@
     margin-bottom: 5px;
     pointer-events: none;
     transform: translateY(-35px) translateX(0px);
-    color: #000000;
+    color: $brand-black;
     width: 100%;
     margin: 0 0 5px;
   }

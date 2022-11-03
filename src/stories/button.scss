@@ -1,0 +1,103 @@
+@import '_variables.scss';
+
+.nexi-button {
+  font-family: 'Karbon-semibold', sans-serif;
+  border-radius: 4px;
+  min-width: 180px;
+  cursor: pointer;
+  height: 40px;
+  text-transform: uppercase;
+  border: 0;
+  margin: 0;
+  padding: 12px 20px;
+  letter-spacing: 2px;
+  font-size: 16px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* PRIMARY BUTTON */
+
+.nexi-button--primary {
+  background-color: $brand-color;
+  color: $brand-white;
+
+  &.disabled {
+    background-color: $brand-color;
+    color: $brand-white;
+    pointer-events: none;
+    opacity: 0.2;
+  }
+
+  &:hover {
+    background-color: $brand-secondary-blue;
+    color: $brand-white;
+  }
+
+  &:active {
+  background-color: $brand-blue-active;
+  color: $brand-white;
+  }
+
+  &.dark-theme {
+    background-color: $brand-white;
+    color: $brand-color;
+
+    &:hover {
+      background-color: $brand-secondary-blue;
+      color: $brand-white;
+    }
+
+    &:active {
+      background-color: $brand-blue-active;
+      color: $brand-white;
+    }
+  }
+}
+
+/* SECONDARY BUTTON */
+
+.nexi-button--secondary {
+  background-color: $brand-white;
+  color: $brand-color;
+  border: 1px solid $brand-color;
+
+  &:hover {
+    border: 1px solid $brand-secondary-blue;
+    color: $brand-secondary-blue;
+    background-color: $brand-white;
+  }
+
+  &:active {
+    border: 1px solid $brand-blue-active;
+    color: $brand-blue-active;
+    background-color: $brand-white;
+  }
+
+  &.disabled {
+    background-color: $brand-white;
+    color: $brand-color;
+    border: 1px solid $brand-color;
+    opacity: 0.2;
+  }
+
+  &.dark-theme {
+    background-color: transparent;
+    color: $brand-white;
+    border: 1px solid $brand-white;
+
+    &:hover {
+      background-color: transparent;
+      color: $brand-secondary-blue;
+      border: 1px solid $brand-secondary-blue;
+    }
+
+    &:active {
+      background-color: transparent;
+      color: $brand-blue-active;
+      border: 1px solid $brand-blue-active;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+.nexi-input--container {
+  position: relative;
+  box-sizing: border-box;
+  height: 86px;
+  font-family: 'Karbon-Regular', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 0 auto;
+}
+
+.nexi-input {
+  box-sizing: border-box;
+  height: 100%;
+  max-height: 50px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 2px;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.1);
+  border: 0;
+  padding: 15px;
+  font-family: 'Karbon-Regular', sans-serif;
+  caret-color: #00a5c8;
+  color: #000000;
+  letter-spacing: 0;
+  font-size: 18px;
+  line-height: 19px;
+}
+
+.nexi-input.error {
+  border: 2px solid #FE5A7A;
+  color: #FE5A7A;
+}
+
+.nexi-input.disabled {
+  pointer-events: none;
+}
+
+.nexi-input:focus {
+  outline: none;
+}
+
+.nexi-label {
+  font-family: 'Karbon-Regular', sans-serif;
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 19px;
+  color: rgba(0,0,0,0.6);
+  -webkit-transition: 0.3s ease all;
+  transform: translateY(0px) translateX(15px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+  pointer-events: none;
+}
+
+.nexi-label.focus {
+  opacity: 1;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-bottom: 5px;
+  pointer-events: none;
+  transform: translateY(-35px) translateX(0px);
+  color: #000000;
+  width: 100%;
+  margin: 0 0 5px;
+}
+
+.nexi-label.disabled {
+  opacity: 0.2;
+}
+
+.nexi-errorLabel {
+  font-family: 'Karbon-Semibold', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 15px;
+  margin: 5px 0 0;
+  position: absolute;
+  bottom: 0;
+}

@@ -1,3 +1,5 @@
+@import '_variables.scss';
+
 .nexi-input--container {
   position: relative;
   box-sizing: border-box;
@@ -16,7 +18,7 @@
   width: 100%;
   max-width: 300px;
   border-radius: 2px;
-  background-color: #FFFFFF;
+  background-color: $brand-white;
   box-shadow: 0 4px 16px 0 rgba(0,0,0,0.1);
   border: 0;
   padding: 15px;
@@ -26,19 +28,19 @@
   letter-spacing: 0;
   font-size: 18px;
   line-height: 19px;
-}
 
-.nexi-input.error {
-  border: 2px solid #FE5A7A;
-  color: #FE5A7A;
-}
+  &.error {
+    border: 2px solid #FE5A7A;
+    color: #FE5A7A;
+  }
 
-.nexi-input.disabled {
-  pointer-events: none;
-}
+  &.disabled {
+    pointer-events: none;
+  }
 
-.nexi-input:focus {
-  outline: none;
+  &:focus {
+    outline: none;
+  }
 }
 
 .nexi-label {
@@ -50,6 +52,7 @@
   letter-spacing: 0;
   line-height: 19px;
   color: rgba(0,0,0,0.6);
+  transition: 0.3s ease all;
   -webkit-transition: 0.3s ease all;
   transform: translateY(0px) translateX(15px);
   white-space: nowrap;
@@ -57,23 +60,23 @@
   text-overflow: ellipsis;
   text-align: left;
   pointer-events: none;
-}
 
-.nexi-label.focus {
-  opacity: 1;
-  font-size: 14px;
-  letter-spacing: 0;
-  line-height: 15px;
-  margin-bottom: 5px;
-  pointer-events: none;
-  transform: translateY(-35px) translateX(0px);
-  color: #000000;
-  width: 100%;
-  margin: 0 0 5px;
-}
+  &.focus {
+    opacity: 1;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 15px;
+    margin-bottom: 5px;
+    pointer-events: none;
+    transform: translateY(-35px) translateX(0px);
+    color: #000000;
+    width: 100%;
+    margin: 0 0 5px;
+  }
 
-.nexi-label.disabled {
-  opacity: 0.2;
+  &.disabled {
+    opacity: 0.2;
+  }
 }
 
 .nexi-errorLabel {

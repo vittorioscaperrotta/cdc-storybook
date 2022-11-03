@@ -1,10 +1,10 @@
 import React, { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import './input.css';
+import './input.scss';
 
 
 export const Input = ({ onlyRead, dark, label, error, errorLabel, disabled, ...props }) => {
-  const mode = onlyRead ? 'nexi-input--onlyRead' : 'nexi-input';
+  const mode = onlyRead ? 'nexi-input--onlyRead' : '';
   const status = disabled ? 'disabled' : '';
   const theme = dark ? 'dark-theme' : '';
   const isError = error ? 'error' : '';

@@ -12,28 +12,30 @@ const Template = (args) => <Input {...args} />;
 export const Primary = Template.bind({});
 //Empty
 Primary.args = {
-  label: '',
+  label: 'Label',
   disabled: false,
   dark: false,
+  type: 'text',
 };
 
-export const PrimaryWithLabel = Template.bind({});
+
+export const PrimaryWithValue = Template.bind({});
 // Onclick-Typing
-PrimaryWithLabel.args = {
+PrimaryWithValue.args = {
   label: 'Label',
-  value: 'Lorem ipsum dolor',
   disabled: false,
   dark: false,
+  type: 'text',
 };
 
 export const Error = Template.bind({});
 Error.args = {
   label: 'Label',
-  value: 'Lorem ipsum dolor',
   disabled: false,
   dark: false,
   error: true,
   errorLabel: 'Error',
+  type: 'text',
 };
 
 export const Disabled = Template.bind({});
@@ -41,14 +43,25 @@ Disabled.args = {
   label: 'Label',
   disabled: true,
   dark: false,
+  type: 'text',
 };
 
 export const DisabledWithValue = Template.bind({});
 DisabledWithValue.args = {
   label: 'Label',
-  value: 'Lorem ipsum dolor',
   disabled: true,
   dark: false,
+  type: 'text',
+};
+
+export const PrimaryOnlyRead = Template.bind({});
+// Only read
+PrimaryOnlyRead.args = {
+  label: 'Label',
+  disabled: false,
+  dark: false,
+  onlyRead: true,
+  type: 'text',
 };
 
 export const PrimaryDark = Template.bind({});
@@ -57,24 +70,25 @@ PrimaryDark.args = {
   label: '',
   disabled: false,
   dark: true,
+  type: 'text',
 };
 
-export const PrimaryWithLabelDark = Template.bind({});
+export const PrimaryWithValueDark = Template.bind({});
 // Onclick-Typing
-PrimaryWithLabelDark.args = {
+PrimaryWithValueDark.args = {
   label: 'Label',
-  value: 'Lorem ipsum dolor',
   disabled: false,
   dark: true,
+  type: 'text',
 };
 
 export const ErrorDark = Template.bind({});
 ErrorDark.args = {
   label: 'Label',
-  value: 'Lorem ipsum dolor',
   disabled: false,
   dark: true,
   error: true,
+  type: 'text',
   errorLabel: 'Error',
 };
 
@@ -83,14 +97,25 @@ DisabledDark.args = {
   label: 'Label',
   disabled: true,
   dark: true,
+  type: 'text',
 };
 
 export const DisabledWithValueDark = Template.bind({});
 DisabledWithValueDark.args = {
   label: 'Label',
-  value: 'Lorem ipsum dolor',
   disabled: true,
   dark: true,
+  type: 'text',
+};
+
+export const PrimaryOnlyReadDark = Template.bind({});
+// Only read
+PrimaryOnlyReadDark.args = {
+  label: 'Label',
+  disabled: false,
+  dark: true,
+  onlyRead: true,
+  type: 'text',
 };
 
 
@@ -98,7 +123,7 @@ PrimaryDark.parameters = {
   backgrounds: { default: 'dark' },
 };
 
-PrimaryWithLabelDark.parameters = {
+PrimaryWithValueDark.parameters = {
   backgrounds: { default: 'dark' },
 };
 
@@ -111,5 +136,9 @@ DisabledDark.parameters = {
 };
 
 DisabledWithValueDark.parameters = {
+  backgrounds: { default: 'dark' },
+};
+
+PrimaryOnlyReadDark.parameters = {
   backgrounds: { default: 'dark' },
 };

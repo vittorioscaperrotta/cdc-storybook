@@ -2,6 +2,10 @@ import React, { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './input.scss';
 
+/**
+ * Inputs primary
+ * Text fields can be formatted to indicate the types of data a field accepts, using placeholder text, preset layout, and character limits.
+ */
 
 export const Input = ({ onlyRead, dark, label, error, errorLabel, value, disabled, onChange, type, ...props }) => {
   const mode = onlyRead ? 'onlyRead' : '';
@@ -63,9 +67,9 @@ Input.propTypes = {
    * Dark Background?
    */
   dark:PropTypes.bool,
-  // /**
-  //  * Value of the input
-  //  */
+  /**
+   * Value of the input
+   */
   value: PropTypes.string,
 };
 

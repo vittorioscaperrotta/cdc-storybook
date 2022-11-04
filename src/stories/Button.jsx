@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import './button.scss';
 
 /**
- * Primary UI component for user interaction
+ * Buttons primary
  */
+
 export const Button = ({ primary, dark, label, disabled, ...props }) => {
   const mode = primary ? 'nexi-button--primary' : 'nexi-button--secondary';
   const status = disabled ? 'disabled' : '';

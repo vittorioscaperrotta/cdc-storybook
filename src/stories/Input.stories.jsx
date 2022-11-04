@@ -5,6 +5,11 @@ import { Input } from './Input';
 export default {
   title: 'Component/Input',
   component: Input,
+  // argTypes:{
+  //   dark: {
+  //     control:false, // disable control
+  //   }
+  // }
 };
 
 const Template = (args) => <Input {...args} />;

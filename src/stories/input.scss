@@ -4,11 +4,15 @@
   position: relative;
   box-sizing: border-box;
   height: 86px;
-  font-family: 'Karbon-Regular', sans-serif;
+  font-family: $font-family-regular;
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex: 1 0 auto;
+
+  &.onlyRead {
+    justify-content: flex-start;
+  }
 }
 
 .nexi-input {
@@ -22,20 +26,37 @@
   box-shadow: 0 4px 16px 0 rgba(0,0,0,0.1);
   border: 0;
   padding: 15px;
-  font-family: 'Karbon-Regular', sans-serif;
+  font-family: $font-family-regular;
   caret-color: $brand-blue-active;
   color: $brand-black;
   letter-spacing: 0;
   font-size: 18px;
   line-height: 19px;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 
   &.error {
-    border: 2px solid #FE5A7A;
-    color: #FE5A7A;
+    border: 2px solid $brand-red;
+    color: $brand-red;
   }
 
   &.disabled {
     pointer-events: none;
+    color: $brand-black20;
+  }
+
+  &.onlyRead {
+    box-shadow: none;
+    padding: 0;
+    pointer-events: none;
+    height: auto;
+
+    &.dark-theme {
+      background-color: transparent;
+      color: $brand-white;
+    }
   }
 
   &:focus {
@@ -44,7 +65,7 @@
 }
 
 .nexi-label {
-  font-family: 'Karbon-Regular', sans-serif;
+  font-family: $font-family-regular;
   position: absolute;
   z-index: 1;
   margin: 0;
@@ -66,12 +87,34 @@
     font-size: 14px;
     letter-spacing: 0;
     line-height: 15px;
-    margin-bottom: 5px;
     pointer-events: none;
     transform: translateY(-35px) translateX(0px);
     color: $brand-black;
     width: 100%;
     margin: 0 0 5px;
+  }
+
+  &.dark-theme {
+    &.focus {
+      color: $brand-white;
+    }
+  }
+
+  &.onlyRead {
+    position: relative;
+    transform: translateY(0px) translateX(0);
+    margin: 0 0 17px;
+    opacity: 1;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 15px;
+    pointer-events: none;
+    color: $brand-black;
+    width: 100%;
+
+    &.dark-theme {
+      color: $brand-white;
+    }
   }
 
   &.disabled {
@@ -80,11 +123,15 @@
 }
 
 .nexi-errorLabel {
-  font-family: 'Karbon-Semibold', sans-serif;
+  font-family: $font-family-semibold;
   font-size: 14px;
   letter-spacing: 0;
   line-height: 15px;
   margin: 5px 0 0;
   position: absolute;
   bottom: 0;
+
+  &.dark-theme {
+    color: $brand-white;
+  }
 }

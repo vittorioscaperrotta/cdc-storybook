@@ -1,7 +1,7 @@
 @import '_variables.scss';
 
 .nexi-button {
-  font-family: 'Karbon-semibold', sans-serif;
+  font-family: $font-family-semibold;
   border-radius: 4px;
   min-width: 180px;
   cursor: pointer;
@@ -37,8 +37,8 @@
   }
 
   &:active {
-  background-color: $brand-blue-active;
-  color: $brand-white;
+    background-color: $brand-blue-active;
+    color: $brand-white;
   }
 
   &.dark-theme {

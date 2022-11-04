@@ -3,21 +3,23 @@ import PropTypes from 'prop-types';
 import './input.scss';
 
 
-export const Input = ({ onlyRead, dark, label, error, errorLabel, disabled, ...props }) => {
-  const mode = onlyRead ? 'nexi-input--onlyRead' : '';
+export const Input = ({ onlyRead, dark, label, error, errorLabel, value, disabled, ...props }) => {
+  const mode = onlyRead ? 'onlyRead' : '';
   const status = disabled ? 'disabled' : '';
   const theme = dark ? 'dark-theme' : '';
   const isError = error ? 'error' : '';
   const inputRef = useRef(null);
   const [isFocus, toggleFocus] = useState(false);
   const hasFocus = isFocus ? 'focus' : '';
+  // const [inputValue, setInputValue] = useState('');
 
   useEffect(() =>{
     inputRef.current.value !== '' && toggleFocus(true)
   },[]);
 
-  return (<div className='nexi-input--container'>
-    <p className={['nexi-label', mode, hasFocus, status].join(' ')}>{label}</p>
+  return (<div className={['nexi-input--container', mode, theme].join(' ')}>
+    <p className={['nexi-label', mode, hasFocus, status, theme].join(' ')}>{label}</p>
+    {console.log(inputRef.current)}
     <input
       type="text"
       className={['nexi-input', mode, status, theme, isError].join(' ') }
@@ -25,15 +27,18 @@ export const Input = ({ onlyRead, dark, label, error, errorLabel, disabled, ...p
       ref={inputRef}
       onFocus={() => {inputRef.current.value === '' && toggleFocus(!isFocus)}}
       onBlur={() => {inputRef.current.value === '' && toggleFocus(!isFocus)}}
+      // onChange={(e) => setInputValue(e.target.value)}
+      // defaultValue={value}
+      // readOnly={!isFocus}
     />
-    {isError && <p className='nexi-errorLabel'>{errorLabel}</p>}
+    {isError && <p className={['nexi-errorLabel', theme].join(' ')}>{errorLabel}</p>}
     </div>
   );
 };
 
 Input.propTypes = {
   /**
-   * Is this the principal call to action on the page?
+   * Input not editable
    */
   onlyRead: PropTypes.bool,
   /**
@@ -56,6 +61,7 @@ Input.propTypes = {
    * Dark Background?
    */
   dark:PropTypes.bool,
+  value: PropTypes.string,
 };
 
 Input.defaultProps = {
@@ -63,4 +69,5 @@ Input.defaultProps = {
   disabled: false,
   dark: false,
   error: false,
+  value: ''
 };

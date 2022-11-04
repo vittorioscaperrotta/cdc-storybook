@@ -16,6 +16,9 @@ Primary.args = {
   disabled: false,
   dark: false,
   type: 'text',
+  onlyRead: false,
+  error: false,
+  errorLabel: '',
 };
 
 
@@ -26,6 +29,10 @@ PrimaryWithValue.args = {
   disabled: false,
   dark: false,
   type: 'text',
+  onlyRead: false,
+  error: false,
+  errorLabel: '',
+  value: 'Value',
 };
 
 export const Error = Template.bind({});
@@ -36,6 +43,8 @@ Error.args = {
   error: true,
   errorLabel: 'Error',
   type: 'text',
+  onlyRead: false,
+  value: 'Value',
 };
 
 export const Disabled = Template.bind({});
@@ -44,6 +53,9 @@ Disabled.args = {
   disabled: true,
   dark: false,
   type: 'text',
+  onlyRead: false,
+  error: false,
+  errorLabel: '',
 };
 
 export const DisabledWithValue = Template.bind({});
@@ -52,6 +64,10 @@ DisabledWithValue.args = {
   disabled: true,
   dark: false,
   type: 'text',
+  onlyRead: false,
+  error: false,
+  errorLabel: '',
+  value: 'Value',
 };
 
 export const PrimaryOnlyRead = Template.bind({});
@@ -62,15 +78,21 @@ PrimaryOnlyRead.args = {
   dark: false,
   onlyRead: true,
   type: 'text',
+  error: false,
+  errorLabel: '',
+  value: 'Value',
 };
 
 export const PrimaryDark = Template.bind({});
 //Empty
 PrimaryDark.args = {
-  label: '',
+  label: 'Label',
   disabled: false,
   dark: true,
   type: 'text',
+  onlyRead: false,
+  error: false,
+  errorLabel: '',
 };
 
 export const PrimaryWithValueDark = Template.bind({});
@@ -80,6 +102,10 @@ PrimaryWithValueDark.args = {
   disabled: false,
   dark: true,
   type: 'text',
+  onlyRead: false,
+  error: false,
+  errorLabel: '',
+  value: 'Value',
 };
 
 export const ErrorDark = Template.bind({});
@@ -90,6 +116,8 @@ ErrorDark.args = {
   error: true,
   type: 'text',
   errorLabel: 'Error',
+  onlyRead: false,
+  value: 'Value',
 };
 
 export const DisabledDark = Template.bind({});
@@ -98,6 +126,9 @@ DisabledDark.args = {
   disabled: true,
   dark: true,
   type: 'text',
+  onlyRead: false,
+  error: false,
+  errorLabel: '',
 };
 
 export const DisabledWithValueDark = Template.bind({});
@@ -106,6 +137,10 @@ DisabledWithValueDark.args = {
   disabled: true,
   dark: true,
   type: 'text',
+  onlyRead: false,
+  error: false,
+  errorLabel: '',
+  value: 'Value',
 };
 
 export const PrimaryOnlyReadDark = Template.bind({});
@@ -116,6 +151,9 @@ PrimaryOnlyReadDark.args = {
   dark: true,
   onlyRead: true,
   type: 'text',
+  error: false,
+  errorLabel: '',
+  value: 'Value',
 };
 
 

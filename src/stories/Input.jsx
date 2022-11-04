@@ -27,6 +27,7 @@ export const Input = ({ onlyRead, dark, label, error, errorLabel, value, disable
       ref={inputRef}
       onFocus={() => {inputRef.current.value === '' && toggleFocus(!isFocus)}}
       onBlur={() => {inputRef.current.value === '' && toggleFocus(!isFocus)}}
+      value={value}
     />
     {isError && <p className={['nexi-errorLabel', theme].join(' ')}>{errorLabel}</p>}
     </div>
@@ -65,14 +66,16 @@ Input.propTypes = {
   // /**
   //  * Value of the input
   //  */
-  // value: PropTypes.string,
+  value: PropTypes.string,
 };
 
 Input.defaultProps = {
+  type: 'text',
   onlyRead: false,
+  label: '',
+  errorLabel: '',
+  error: false,
   disabled: false,
   dark: false,
-  error: false,
   value: '',
-  type: 'text',
 };

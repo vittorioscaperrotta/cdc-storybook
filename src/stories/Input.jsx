@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './input.scss';
 
 
-export const Input = ({ onlyRead, dark, label, error, errorLabel, value, disabled, ...props }) => {
+export const Input = ({ onlyRead, dark, label, error, errorLabel, value, disabled, onChange, type, ...props }) => {
   const mode = onlyRead ? 'onlyRead' : '';
   const status = disabled ? 'disabled' : '';
   const theme = dark ? 'dark-theme' : '';
@@ -19,17 +19,14 @@ export const Input = ({ onlyRead, dark, label, error, errorLabel, value, disable
 
   return (<div className={['nexi-input--container', mode, theme].join(' ')}>
     <p className={['nexi-label', mode, hasFocus, status, theme].join(' ')}>{label}</p>
-    {console.log(inputRef.current)}
+    {/* {console.log(inputRef.current)} */}
     <input
-      type="text"
+      type={type}
       className={['nexi-input', mode, status, theme, isError].join(' ') }
       {...props}
       ref={inputRef}
       onFocus={() => {inputRef.current.value === '' && toggleFocus(!isFocus)}}
       onBlur={() => {inputRef.current.value === '' && toggleFocus(!isFocus)}}
-      // onChange={(e) => setInputValue(e.target.value)}
-      // defaultValue={value}
-      // readOnly={!isFocus}
     />
     {isError && <p className={['nexi-errorLabel', theme].join(' ')}>{errorLabel}</p>}
     </div>
@@ -37,6 +34,10 @@ export const Input = ({ onlyRead, dark, label, error, errorLabel, value, disable
 };
 
 Input.propTypes = {
+  /**
+  * Input Types like number, password, string
+  */
+  type: PropTypes.oneOf(['number', 'password', 'text']),
   /**
    * Input not editable
    */
@@ -61,7 +62,10 @@ Input.propTypes = {
    * Dark Background?
    */
   dark:PropTypes.bool,
-  value: PropTypes.string,
+  // /**
+  //  * Value of the input
+  //  */
+  // value: PropTypes.string,
 };
 
 Input.defaultProps = {
@@ -69,5 +73,6 @@ Input.defaultProps = {
   disabled: false,
   dark: false,
   error: false,
-  value: ''
+  value: '',
+  type: 'text',
 };

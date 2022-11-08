@@ -3,7 +3,7 @@ import React from 'react';
 import { Input } from './Input';
 
 export default {
-  title: 'Component/Input',
+  title: 'Design System/Components/Input',
   component: Input,
   // argTypes:{
   //   dark: {

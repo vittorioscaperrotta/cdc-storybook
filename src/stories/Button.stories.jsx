@@ -4,8 +4,9 @@ import { Button } from './Button';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Component/Button',
+  title: 'Design System/Components/Button',
   component: Button,
+  argTypes: { onClick: { action: 'clicked' } }, //add action to canvas
 };
 
 const Template = (args) => <Button {...args} />;

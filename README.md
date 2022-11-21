@@ -1,5 +1,5 @@
 # Nexi-Storybook
-Reposotory for Storybook CDC.
+Repository for Storybook CDC.
 
 ## Node version
 14.17.0

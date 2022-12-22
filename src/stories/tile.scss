@@ -1,0 +1,312 @@
+@import '../style/variables';
+// NPM Portal Tile
+.nexi_portal__tile {
+  margin: 0 auto 15px;
+  width: 100%;
+
+  .container {
+    align-items: center;
+    background-color: #fff;
+    border: 0;
+    border-radius: 6px;
+    box-shadow: 0 10px 15px rgba(#000, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 100px;
+    outline: 0;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+
+    @media screen and (max-width: 768px) {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .info-content {
+      align-items: center;
+      display: flex;
+      width: 100%;
+
+      @media screen and (max-width: 768px) {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    .image {
+      display: block;
+      max-height: 60px;
+      margin-right: 20px;
+      max-width: 60px;
+
+      @media screen and (max-width: 768px) {
+        margin: 0 0 10px;
+      }
+    }
+
+    // .icon {
+    //   align-items: center;
+    //   color: #000;
+    //   display: flex;
+    //   font-size: 56px;
+    //   height: 35px;
+    //   justify-content: center;
+    //   position: relative;
+    //   line-height: 35px;
+    //   margin-right: 25px;
+    //   width: 35px;
+
+    //   @media screen and (max-width: 768px) {
+    //     margin: 0 0 10px;
+    //   }
+    // }
+
+    .close:not(.grommetux-button) {
+      border: 0 !important;
+      box-shadow: none;
+      display: block;
+      height: 16px;
+      margin: 0;
+      max-width: 16px !important;
+      min-height: 0;
+      min-width: 0 !important;
+      padding: 0 !important;
+      position: absolute;
+      outline: 0 !important;
+      right: 20px;
+      top: 20px;
+      width: 16px;
+
+      &:hover,
+      &:focus {
+        border: 0 !important;
+        box-shadow: none;
+        outline: 0 !important;
+      }
+
+      // i {
+      //   color: #000;
+
+      //   &::before {
+      //     font-size: 15px;
+      //   }
+      // }
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0 20px 0 0;
+    width: 100%;
+
+    @media screen and (max-width: 768px) {
+      margin: 0 0 25px;
+      padding: 0;
+    }
+
+    .title-container {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      margin: 0 0 5px;
+    }
+
+    .title {
+      color: #000;
+      font-family: 'KarbonMedium', sans-serif;
+      font-size: 24px;
+      letter-spacing: 0;
+      line-height: 26px;
+      margin: 0;
+      max-width: 100%;
+    }
+
+    .img-title {
+      height: 23px;
+      margin: 0 0 0 20px;
+      width: 35px;
+    }
+
+    .message {
+      color: #000;
+      font-family: 'KarbonRegular', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      letter-spacing: 0;
+      line-height: 19px;
+      margin: 0;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  .action_button:not(.grommetux-button) {
+    border: 0;
+    box-shadow: none;
+    color: #2d32aa;
+    font-size: 16px;
+    font-family: 'KarbonSemibold', sans-serif;
+    letter-spacing: 2px;
+    line-height: 17px;
+    margin: 0;
+    max-width: fit-content;
+    min-width: 50px;
+    outline: 0;
+    padding: 0 !important;
+    text-align: right;
+    text-transform: uppercase;
+    width: 100%;
+    white-space: nowrap;
+
+    &:focus {
+      box-shadow: none;
+      outline: 0;
+      text-decoration: none;
+    }
+
+    &:hover {
+      box-shadow: none;
+      color: #00b8de;
+      outline: 0;
+      text-decoration: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      max-width: 100%;
+      text-align: left;
+      width: 100%;
+    }
+  }
+
+  &.entirelyClickable {
+    cursor: pointer;
+
+    .content {
+      margin: 0;
+
+      @media screen and (max-width: 768px) {
+        margin: 0;
+      }
+
+      .title-container {
+        margin-bottom: 10px;
+      }
+    }
+
+    .container {
+      @media screen and (max-width: 768px) {
+        padding: 20px 15px;
+      }
+
+      .image,
+      .icon {
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &.Cashback {
+    .container {
+      background-color: #2d32aa;
+    }
+
+    .content {
+      .title {
+        color: #fff;
+      }
+
+      .message {
+        color: #fff;
+      }
+    }
+
+    // .close:not(.grommetux-button) {
+
+    //   i {
+    //     color: #fff;
+    //   }
+    // }
+
+    .action_button:not(.grommetux-button) {
+      color: #fff;
+    }
+  }
+
+  &.pagoPa {
+    .container {
+      background-color: #06c;
+
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { //Fix IE
+        padding: 30px 20px;
+      }
+    }
+
+    .info-content {
+
+      @media screen and (max-width: 768px) {
+        align-items: center;
+      }
+    }
+
+    .content {
+
+      @media screen and (max-width: 768px) {
+        border-bottom: 0.5px solid #fff;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+      }
+
+      .title {
+        color: #fff;
+      }
+
+      .message {
+        color: #fff;
+        font-size: 19px;
+
+        @media screen and (max-width: 768px) {
+          text-align: center;
+        }
+      }
+    }
+
+    // .close:not(.grommetux-button) {
+
+    //   i {
+    //     color: #fff;
+    //   }
+    // }
+
+    .action_button:not(.grommetux-button) {
+      color: #fff;
+
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { //Fix IE
+        min-width: 230px;
+      }
+
+      @media screen and (max-width: 768px) {
+        margin: 0 auto;
+        max-width: 230px;
+        text-align: center;
+      }
+    }
+  }
+
+  &.disabled {
+    cursor: pointer;
+    pointer-events: none;
+    opacity: 0.3;
+  }
+
+  &.width100 {
+    max-width: 100%;
+  }
+}
+
+

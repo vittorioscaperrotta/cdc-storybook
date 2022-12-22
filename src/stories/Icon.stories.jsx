@@ -6,14 +6,14 @@ import { Icon } from './Icon';
 export default {
   title: 'Design System/Components/Icon',
   component: Icon,
-  argTypes: { onClick: { action: 'clicked' } }, //add action to canvas
+  argTypes: { }, //add action to canvas
 };
 
 const Template = (args) => <Icon {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  name: "delete-group",
+  name: "nexi-delete-group",
   size: "large",
   color: "primary"
 };

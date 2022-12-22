@@ -12,7 +12,7 @@ const Template = (args) => <Tile {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  cashback: false,
+  dark: false,
   title: "Titolo",
   message: "Descrizione",
   buttonAction: 'Tile',
@@ -21,7 +21,7 @@ Primary.args = {
 
 export const PrimaryDisabled = Template.bind({});
 PrimaryDisabled.args = {
-  cashback: false,
+  dark: false,
   disabled: true,
   title: "Titolo",
   message: "Descrizione",
@@ -31,7 +31,7 @@ PrimaryDisabled.args = {
 
 export const WithIcon = Template.bind({});
 WithIcon.args = {
-  cashback: false,
+  dark: false,
   title: "Titolo",
   message: "Descrizione",
   buttonAction: 'Tile',
@@ -41,7 +41,7 @@ WithIcon.args = {
 
 export const WithImage = Template.bind({});
 WithImage.args = {
-  cashback: false,
+  dark: false,
   title: "Titolo",
   message: "Descrizione",
   buttonAction: 'Tile',

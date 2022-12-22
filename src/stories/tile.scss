@@ -6,14 +6,15 @@
 
   .container {
     align-items: center;
-    background-color: #fff;
+    background-color: $brand-white;
     border: 0;
     border-radius: 6px;
-    box-shadow: 0 10px 15px rgba(#000, 0.1);
+    box-shadow: 0 10px 15px rgba($brand-black, 0.1);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     min-height: 100px;
+    max-width: 956px;
     outline: 0;
     padding: 20px;
     position: relative;
@@ -46,22 +47,23 @@
       }
     }
 
-    // .icon {
-    //   align-items: center;
-    //   color: #000;
-    //   display: flex;
-    //   font-size: 56px;
-    //   height: 35px;
-    //   justify-content: center;
-    //   position: relative;
-    //   line-height: 35px;
-    //   margin-right: 25px;
-    //   width: 35px;
+    .iconComponent {
+      align-items: center;
+      color: $brand-black;
+      display: flex;
+      font-size: 56px;
+      font-weight: 400;
+      height: 35px;
+      justify-content: center;
+      position: relative;
+      line-height: 35px;
+      margin-right: 25px;
+      width: 35px;
 
-    //   @media screen and (max-width: 768px) {
-    //     margin: 0 0 10px;
-    //   }
-    // }
+      @media screen and (max-width: 768px) {
+        margin: 0 0 10px;
+      }
+    }
 
     .close:not(.grommetux-button) {
       border: 0 !important;
@@ -86,13 +88,13 @@
         outline: 0 !important;
       }
 
-      // i {
-      //   color: #000;
+      .iconComponent {
+        color: $brand-black;
 
-      //   &::before {
-      //     font-size: 15px;
-      //   }
-      // }
+        &::before {
+          font-size: 15px;
+        }
+      }
     }
   }
 
@@ -116,8 +118,8 @@
     }
 
     .title {
-      color: #000;
-      font-family: 'KarbonMedium', sans-serif;
+      color: $brand-black;
+      font-family: $font-family-medium;
       font-size: 24px;
       letter-spacing: 0;
       line-height: 26px;
@@ -132,8 +134,8 @@
     }
 
     .message {
-      color: #000;
-      font-family: 'KarbonRegular', sans-serif;
+      color: $brand-black;
+      font-family: $font-family-regular;
       font-size: 18px;
       font-weight: 400;
       letter-spacing: 0;
@@ -149,7 +151,7 @@
     box-shadow: none;
     color: #2d32aa;
     font-size: 16px;
-    font-family: 'KarbonSemibold', sans-serif;
+    font-family: $font-family-semibold;
     letter-spacing: 2px;
     line-height: 17px;
     margin: 0;
@@ -211,30 +213,34 @@
     }
   }
 
-  &.Cashback {
+  &.Dark {
     .container {
       background-color: #2d32aa;
+
+      .iconComponent{
+        color: $brand-white;
+      }
     }
 
     .content {
       .title {
-        color: #fff;
+        color: $brand-white;
       }
 
       .message {
-        color: #fff;
+        color: $brand-white;
       }
     }
 
-    // .close:not(.grommetux-button) {
+    .close:not(.grommetux-button) {
 
-    //   i {
-    //     color: #fff;
-    //   }
-    // }
+      .iconComponent {
+        color: $brand-white;
+      }
+    }
 
     .action_button:not(.grommetux-button) {
-      color: #fff;
+      color: $brand-white;
     }
   }
 
@@ -257,17 +263,17 @@
     .content {
 
       @media screen and (max-width: 768px) {
-        border-bottom: 0.5px solid #fff;
+        border-bottom: 0.5px solid $brand-white;
         margin-bottom: 20px;
         padding-bottom: 20px;
       }
 
       .title {
-        color: #fff;
+        color: $brand-white;
       }
 
       .message {
-        color: #fff;
+        color: $brand-white;
         font-size: 19px;
 
         @media screen and (max-width: 768px) {
@@ -276,15 +282,15 @@
       }
     }
 
-    // .close:not(.grommetux-button) {
+    .close:not(.grommetux-button) {
 
-    //   i {
-    //     color: #fff;
-    //   }
-    // }
+      .iconComponent {
+        color: $brand-white;
+      }
+    }
 
     .action_button:not(.grommetux-button) {
-      color: #fff;
+      color: $brand-white;
 
       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { //Fix IE
         min-width: 230px;

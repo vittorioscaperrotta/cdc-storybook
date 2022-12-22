@@ -5,14 +5,14 @@ import { Icon } from './Icon';
 
 export const Tile = props => {
   return (
-  <div className={`nexi_portal__tile ${props.disabled ? 'disabled' : ''} ${props.entirelyClickable ? 'entirelyClickable' : ''} ${props.width100 ? 'width100' : ''} ${props.cashback ? 'Cashback' : props.pagopa ? 'pagoPa' : ''}`}>
+  <div className={`nexi_portal__tile ${props.disabled ? 'disabled' : ''} ${props.entirelyClickable ? 'entirelyClickable' : ''} ${props.width100 ? 'width100' : ''} ${props.dark ? 'Dark' : props.pagopa ? 'pagoPa' : ''}`}>
     <div className="container" onClick={props.entirelyClickable ? () => props.buttonAction() : ''}>
       <div className="info-content">
         {props.image ? (
           <img src={props.image} alt="icon" className="image" />
         ) : ('')}
         {props.icon ? (
-         <Icon name="nexi-user medium black"></Icon>
+         <Icon name="nexi-user small"></Icon>
         ) : ('')}
         <div className="content">
           <div className="title-container">
@@ -45,7 +45,7 @@ Tile.propTypes = {
   buttonText: PropTypes.string,
   buttonAction: PropTypes.func,
   // type: PropTypes.string,
-  cashback: PropTypes.bool,
+  dark: PropTypes.bool,
   image: PropTypes.string,
   imgTitle: PropTypes.string,
   icon: PropTypes.bool,
@@ -61,7 +61,7 @@ Tile.defaultProps = {
   buttonText: '',
   buttonAction: () => undefined,
   // type: '',
-  cashback: false,
+  dark: false,
   image: '',
   imgTitle: '',
   icon: false,

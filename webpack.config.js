@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-  entry: path.join(__dirname, "src", "index.jsx"),
+  entry: path.join(__dirname, "src", "index.js"),
   devtool: "source-map",
   optimization: {
     minimizer: [new UglifyJsPlugin()],
@@ -66,15 +66,15 @@ module.exports = {
             loader: 'css-loader',
             options: {
                 importLoaders: 1,
-                localIdentName: '[name]-[local]-[hash:base64:3]',
+                localIdentName: '[name]_[local]_[hash:base64:3]',
                 modules: true,
             },
           },
           {
             loader: "sass-loader",
             options: {
-              data: '@import "./global.scss";',
-              includePaths: [__dirname, "./src/scss/"]
+              data: '@import "./main.scss";',
+              includePaths: [__dirname, "./style/"]
             }
           }
         ]

@@ -1,0 +1,63 @@
+
+@keyframes g-new-wave {
+  0%, 100%, 80% {
+    -webkit-transform: translate3d(0, 8px, 0);
+    transform: translate3d(0, 8px, 0);
+  }
+
+  40% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+    transform: translate3d(-1px, 0, 0);
+  }
+}
+
+@mixin nexi-loader($background-color) {
+  display: block;
+  height: 40px;
+  margin: 0 20px;
+  max-width: 180px;
+  min-width: 180px;
+  padding: 0 20px;
+  text-align: center;
+  transition: opacity 2s linear;
+
+  .dot-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    padding: 5px 0 10px;
+  }
+
+  .dot {
+    animation: g-new-wave 0.8s ease-in-out 0s infinite both;
+    border-radius: 50%;
+    display: inline-block;
+    height: 8px;
+    margin: 0 3px;
+    width: 8px;
+
+    &:nth-child(1) {
+      animation-delay: -0.45s;
+      background-color: $background-color;
+    }
+
+    &:nth-child(2) {
+      animation-delay: -0.28s;
+      background-color: $background-color;
+    }
+
+    &:nth-child(3) {
+      animation-delay: -0.15s;
+      background-color: $background-color;
+    }
+  }
+}
+
+.nexi-loader {
+  @include nexi-loader(#2d32aa);
+
+  &.dark-theme {
+    @include nexi-loader(#fff);
+  }
+}

@@ -26,7 +26,6 @@ PrimaryDisabled.args = {
   title: "Titolo",
   message: "Descrizione",
   buttonAction: 'Tile',
-
 };
 
 export const WithIcon = Template.bind({});

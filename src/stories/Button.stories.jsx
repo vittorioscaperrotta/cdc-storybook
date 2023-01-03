@@ -4,9 +4,13 @@ import { Button } from './Button';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Design System/Components/Button',
+  title: 'Design System/Components/Atoms/Button',
   component: Button,
-  argTypes: { onClick: { action: 'clicked' } }, //add action to canvas
+  argTypes: {
+    onClick: {
+      action: 'clicked'
+    }
+  }, //add action to canvas
 };
 
 const Template = (args) => <Button {...args} />;
@@ -17,6 +21,7 @@ Primary.args = {
   label: 'Button',
   disabled: false,
   dark: false,
+  loading: false,
 };
 
 export const PrimaryDisabled = Template.bind({});
@@ -25,6 +30,7 @@ PrimaryDisabled.args = {
   label: 'Button',
   disabled: true,
   dark: false,
+  loading: false,
 };
 
 export const PrimaryDark = Template.bind({});
@@ -33,10 +39,13 @@ PrimaryDark.args = {
   label: 'Button',
   disabled: false,
   dark: true,
+  loading: false,
 };
 
 PrimaryDark.parameters = {
-  backgrounds: { default: 'dark' },
+  backgrounds: {
+    default: 'dark'
+  },
 };
 
 export const Secondary = Template.bind({});
@@ -45,6 +54,7 @@ Secondary.args = {
   label: 'Button',
   disabled: false,
   dark: false,
+  loading: false,
 };
 
 export const SecondaryDisabled = Template.bind({});
@@ -53,6 +63,7 @@ SecondaryDisabled.args = {
   label: 'Button',
   disabled: true,
   dark: false,
+  loading: false,
 };
 
 export const SecondaryDark = Template.bind({});
@@ -61,6 +72,7 @@ SecondaryDark.args = {
   label: 'Button',
   disabled: false,
   dark: true,
+  loading: false,
 };
 
 SecondaryDark.parameters = {

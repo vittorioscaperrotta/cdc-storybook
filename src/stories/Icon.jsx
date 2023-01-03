@@ -5,11 +5,14 @@ import './icon.scss';
 export const Icon = ({ name, size, color, ...props })=> {
 
   return (
-    <i className={`iconComponent ${[name]} ${[size]} ${[color]}`}
+    <i
+      className={`iconComponent ${name}`}
+      style={{
+        color: color,
+        fontSize: size,
+      }}
       {...props}
     />
-  //color e font-size da passare come props
-  // style in linea
   )
 };
 
@@ -17,7 +20,6 @@ Icon.propTypes = {
   name: PropTypes.string,
   size: PropTypes.string,
   color: PropTypes.string,
-
 };
 
 Icon.defaultProps = {

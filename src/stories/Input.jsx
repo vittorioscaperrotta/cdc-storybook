@@ -23,7 +23,6 @@ export const Input = ({ onlyRead, dark, label, error, errorLabel, value, disable
 
   return (<div className={['nexi-input--container', mode, theme].join(' ')}>
     <p className={['nexi-label', mode, hasFocus, status, theme].join(' ')}>{label}</p>
-    {/* {console.log(inputRef.current)} */}
     <input
       type={type}
       className={['nexi-input', mode, status, theme, isError].join(' ') }

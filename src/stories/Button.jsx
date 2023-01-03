@@ -1,33 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './button.scss';
+import { Loader } from './Loader';
 
-/**
- * Buttons primary
- */
-
-export const Button = ({ primary, dark, label, disabled, ...props }) => {
+export const Button = ({ primary, dark, label, disabled, loading, ...props }) => {
   const mode = primary ? 'nexi-button--primary' : 'nexi-button--secondary';
   const status = disabled ? 'disabled' : '';
   const theme = dark ? 'dark-theme' : '';
+
   return (
-    <button
-      type="button"
-      className={['nexi-button', mode, status, theme].join(' ') }
-      {...props}
-    >
-      {label}
-    </button>
+    <>
+      {loading ? (
+        <Loader />
+      ) : (
+        <button
+          type="button"
+          className={['nexi-button', mode, status, theme].join(' ')}
+          {...props}
+        >
+          {label}
+        </button>
+      )}
+    </>
   );
 };
 
 Button.propTypes = {
   /**
-   * Is this the principal call to action on the page?
+   * Is this the principal call to action on the page
    */
   primary: PropTypes.bool,
   /**
-   * Button laberl
+   * Button label
    */
   label: PropTypes.string.isRequired,
   /**
@@ -39,9 +43,13 @@ Button.propTypes = {
    */
   disabled: PropTypes.bool,
   /**
-   * Dark Background?
+   * Dark Background
    */
-  dark:PropTypes.bool,
+  dark: PropTypes.bool,
+  /**
+   * Loading
+   */
+  loading: PropTypes.bool,
 };
 
 Button.defaultProps = {
@@ -49,4 +57,5 @@ Button.defaultProps = {
   disabled: false,
   onClick: undefined,
   dark: false,
+  loading: false,
 };

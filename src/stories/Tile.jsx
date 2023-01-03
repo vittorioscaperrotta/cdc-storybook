@@ -3,16 +3,22 @@ import PropTypes from 'prop-types';
 import './tile.scss';
 import { Icon } from './Icon';
 
-export const Tile = props => {
-  return (
-  <div className={`nexi_portal__tile ${props.disabled ? 'disabled' : ''} ${props.entirelyClickable ? 'entirelyClickable' : ''} ${props.width100 ? 'width100' : ''} ${props.dark ? 'Dark' : props.pagopa ? 'pagoPa' : ''}`}>
+export const Tile = props => (
+  <div className={`
+    tile
+    ${props.disabled ? 'disabled' : ''}
+    ${props.entirelyClickable ? 'entirelyClickable' : ''}
+    ${props.width100 ? 'width100' : ''}
+    ${props.dark ? 'Dark' : ''}
+  `}
+  >
     <div className="container" onClick={props.entirelyClickable ? () => props.buttonAction() : ''}>
       <div className="info-content">
         {props.image ? (
           <img src={props.image} alt="icon" className="image" />
         ) : ('')}
         {props.icon ? (
-         <Icon name="nexi-user small"></Icon>
+          <Icon name="nexi-user small" />
         ) : ('')}
         <div className="content">
           <div className="title-container">
@@ -30,14 +36,14 @@ export const Tile = props => {
           {props.buttonText}
         </button>
         : !props.entirelyClickable && props.buttonText === 'noBtn'
-          ? <button className="close" onClick={() => props.buttonAction()}>
-              <Icon name="nexi-close medium black"></Icon>
-          </button>
-        : ''}
+          ? (
+            <button className="close" onClick={() => props.buttonAction()}>
+              <Icon name="nexi-close medium black" />
+            </button>
+          ) : ''}
     </div>
   </div>
 );
-}
 
 Tile.propTypes = {
   title: PropTypes.string,
@@ -50,7 +56,7 @@ Tile.propTypes = {
   imgTitle: PropTypes.string,
   icon: PropTypes.bool,
   entirelyClickable: PropTypes.bool,
-  pagopa: PropTypes.bool,
+  // pagopa: PropTypes.bool,
   width100: PropTypes.bool,
   disabled: PropTypes.bool
 };
@@ -66,7 +72,7 @@ Tile.defaultProps = {
   imgTitle: '',
   icon: false,
   entirelyClickable: false,
-  pagopa: false,
+  // pagopa: false,
   width100: false,
   disabled: false
 };

@@ -1,6 +1,6 @@
 .iconComponent {
   font-family: 'nexi-icons' !important;
-  //speak: never;
+  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -1157,12 +1157,6 @@
     content: '\e9bd';
   }
 }
-
-// .nexi-7su7 {
-//   &::before {
-//     content: '\e9be';
-//   }
-// }
 
 .nexi-info {
   &::before {
@@ -5514,18 +5508,6 @@
   }
 }
 
-// .nexi-3x3module {
-//   &::before {
-//     content: '\ec94';
-//   }
-// }
-
-// .nexi-2x2module {
-//   &::before {
-//     content: '\ec95';
-//   }
-// }
-
 .nexi-factory {
   &::before {
     content: '\ec96';
@@ -5897,18 +5879,6 @@
     content: '\ecd3';
   }
 }
-
-// .nexi-3d-glasses {
-//   &::before {
-//     content: '\ecd4';
-//   }
-// }
-
-// .nexi-3d-screen {
-//   &::before {
-//     content: '\ecd5';
-//   }
-// }
 
 .nexi-banned-video {
   &::before {

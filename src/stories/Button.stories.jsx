@@ -68,7 +68,7 @@ SecondaryDisabled.args = {
 
 export const SecondaryDark = Template.bind({});
 SecondaryDark.args = {
-  primary: true,
+  primary: false,
   label: 'Button',
   disabled: false,
   dark: true,
@@ -76,6 +76,8 @@ SecondaryDark.args = {
 };
 
 SecondaryDark.parameters = {
-  backgrounds: { default: 'dark' },
+  backgrounds: {
+    default: 'dark'
+  },
 };
 

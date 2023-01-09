@@ -1,0 +1,13 @@
+@import '../../style/main';
+
+$nexi-icon-path: '../../fonts/NexiIcons';
+
+@font-face {
+  font-family: 'nexi-icons';
+  src: url('#{$nexi-icon-path}/nexi-icons.ttf') format('truetype'),
+    url('#{$nexi-icon-path}/nexi-icons.woff') format('woff'),
+    url('#{$nexi-icon-path}/nexi-icons.svg') format('svg');
+  font-style: normal;
+  font-weight: normal;
+  font-display: block;
+}

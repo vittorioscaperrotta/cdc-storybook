@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Loader } from './Loader';
+import { Loader } from '../components/Loader/Loader';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

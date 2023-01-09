@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './button.scss';
-import { Loader } from './Loader';
+import { Loader } from '../Loader/Loader';
 
 export const Button = ({ primary, dark, label, disabled, loading, ...props }) => {
   const mode = primary ? 'nexi-button--primary' : 'nexi-button--secondary';

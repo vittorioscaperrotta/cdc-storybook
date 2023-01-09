@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Icon } from '../Icon/Icon';
 import './tile.scss';
-import { Icon } from './Icon';
 
 export const Tile = props => (
   <div className={`

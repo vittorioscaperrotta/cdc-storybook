@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Icon } from './Icon';
+import { Icon } from '../components/Icon/Icon';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

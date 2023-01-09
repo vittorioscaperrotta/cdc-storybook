@@ -26,5 +26,4 @@ Icon.defaultProps = {
   name:'',
   size: '',
   color: '',
-
 };

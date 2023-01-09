@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Tile } from './Tile';
+import { Tile } from '../components/Tile/Tile';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
